@@ -19,3 +19,14 @@ test('app loading should be truthy', () => {
 
     expect(app.loading).toBeTruthy();
 });
+
+test('app model should be reset', () => {
+    const app = AppModel.create({});
+
+    app.setField('name', 'zzz');
+    app.setField('loading', true);
+
+    app.resetAll();
+
+    expect(app).toMatchObject({ loading: false, name: '' });
+});
