@@ -5,11 +5,9 @@ import { observer, useLocalObservable } from 'mobx-react-lite';
 import Image from 'next/image';
 
 const Home = () => {
-  const appStore = useLocalObservable(() => AppModel.create({}));
+    const appStore = useLocalObservable(() => AppModel.create({}));
 
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
-  );
+    return <main className="flex min-h-screen flex-col items-center justify-between">test</main>;
 };
 
 export default observer(Home);
